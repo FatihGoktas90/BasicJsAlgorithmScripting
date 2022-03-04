@@ -111,3 +111,90 @@ function truncateString(str, num) {
 
 
 //Finders Keepers
+
+function findElement(arr, func) {
+  let num = 0;
+  return num;
+  
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+
+//Boo who
+
+function booWho(bool) {
+  return typeof bool === "boolean";
+}
+
+// booWho(null);
+
+//Title Case a Sentence
+
+function titleCase(str) {
+  const newTitle = str.split(" ");
+  const updatedTitle = [];
+  for (let st in newTitle) {
+    updatedTitle[st] = newTitle[st][0].toUpperCase() + newTitle[st].slice(1).toLowerCase();
+  }
+  return updatedTitle.join(" ");
+}
+titleCase("I'm a little tea pot");
+
+
+//Slice and Splice
+
+function frankenSplice(arr1, arr2, n) {
+  // It's alive. It's alive!
+  let localArray = arr2.slice();
+  for (let i = 0; i < arr1.length; i++) {
+    localArray.splice(n, 0, arr1[i]);
+    n++;
+  }
+  return localArray;
+}
+
+//Falsy Bouncer
+
+function bouncer(arr) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) newArray.push(arr[i]);
+  }
+  return newArray;
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+//Where do I Belong
+
+function getIndexToIns(arr, num) {
+  arr.sort((a, b) => a - b);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= num)
+      return i;
+  }
+
+  return arr.length;
+}
+
+getIndexToIns([40, 60], 50);
+
+//Mutations
+
+function mutation(arr) {
+  let test = arr[1].toLowerCase();
+  let target = arr[0].toLowerCase();
+  for (let i = 0; i < test.length; i++) {
+    if (target.indexOf(test[i]) < 0) return false;
+  }
+  return true;
+}
+
+//Chunky Monkey
+
+
+
+
+
